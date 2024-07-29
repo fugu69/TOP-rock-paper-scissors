@@ -2,10 +2,18 @@ let playerScore = 0;
 let computerScore = 0;
 const items = ["rock", "scissors", "paper"];
 
-while (playerScore !== 3 && computerScore !==3) {
+function getComputerChoice(){
     let computerChoiceIndex = Math.floor(Math.random() * items.length);
-    let computerChoice = items[computerChoiceIndex];
-    let playerChoice = prompt("Rock, Scissors or Paper?").toLowerCase()
+    return items[computerChoiceIndex];
+}
+
+function getHumanChoice(){
+    return prompt("Rock, Scissors or Paper?").toLowerCase();
+}
+
+while (playerScore !== 3 && computerScore !==3) {
+    let computerChoice = getComputerChoice();
+    let playerChoice = getHumanChoice();
 
     if (playerChoice === "rock"){
         if (computerChoice === "rock"){
