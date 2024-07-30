@@ -1,30 +1,37 @@
+/* style.css */
+
 body {
     height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    gap: 1em;
     background-color: #EBE9E1;
+}
+
+.score-board{ 
+    margin: 2em 0;
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
 }
 
 .btn-container {
     display: flex;
-    /* background-color: black; */
-    gap: 4em;
-    margin-top: 8em;
+    gap: 2em;
+    margin-bottom: 1em;
 }
 
 .btn {
-    flex: 1;
-    /* background-color: #B3B4BD; */
     background-color: #EFB11D;
     border: none;
     cursor: pointer;
     font-weight: bold;
     font-size: 38px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 2em 4em;
+    padding: 1em 2em;
     border-radius: 14px;
     transition: transform 0.3s ease;
 }
@@ -32,5 +39,29 @@ body {
 .btn:hover {
     transform: translateY(-10px);
     background-color: #D6536D;
-    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.44);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.44);
+}
+
+#choices {
+    display: flex;
+    gap: 2em;
+    margin: 2em 0;
+}
+
+.choice {
+    font-size: 5rem;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+    background-color: #fff;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+}
+
+.choice.show {
+    opacity: 1;
+    transform: scale(1.2);
 }

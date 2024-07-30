@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Have fun!</title>
+    <title>Rock Paper Scissors Animation</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h2>Make your choice</h2>
+    <div class="score-board">
+        <div id="player-score" class="score">Player Score: 0</div>
+        <span> | </span>
+        <div id="computer-score" class="score">Computer Score: 0</div>
+    </div>
     <div class="btn-container">
         <button class="btn" id="rock">🪨</button>
         <button class="btn" id="paper">📄</button>
         <button class="btn" id="scissors">✂️</button>
     </div>
+
+    <div id="choices">
+        <div id="player-choice" class="choice">?</div>
+        <div id="computer-choice" class="choice">?</div>
+    </div>
+
+    <div id="result"></div>
 </body>
 </html>
